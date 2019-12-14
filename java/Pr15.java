@@ -24,7 +24,6 @@ class Pr15 {
                     Collections.sort(tmp);
 
                     results.add(tmp);
-                    System.out.println(nums[i] + ", " + nums[j] + ", " + (target-nums[j]));
                 }
 
                 used.add(nums[j]);
