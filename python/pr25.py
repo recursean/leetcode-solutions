@@ -7,8 +7,7 @@ class ListNode:
         self.next = next
 
 class Solution:
-    def swapPairs(self, head: Optional[ListNode]) -> Optional[ListNode]:
-        k = 2
+    def reverseKGroup(self, head: Optional[ListNode], k: int) -> Optional[ListNode]:
         current = head
         newHead = None
         prev = None
@@ -25,6 +24,9 @@ class Solution:
                 current = current.next
 
                 ctr += 1
+            
+            if ctr != k-1:
+                return newHead
             
             # save next node of new root of sublist 
             tmp = current.next
@@ -56,13 +58,14 @@ class Solution:
         return newHead
 
 n4 = ListNode(4)
-n3 = ListNode(3)
-n2 = ListNode(2)
-n1 = ListNode(1)
+n3 = ListNode(3, n4)
+n2 = ListNode(2, n3)
+n1 = ListNode(1, n2)
 
 sol = Solution()
+k = 3
 
-n = sol.swapPairs(None)
+n = sol.reverseKGroup(n1, k)
 
 while(n != None):
     print(n.val, '->')
