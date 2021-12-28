@@ -26,6 +26,9 @@ class Solution:
 
                 ctr += 1
             
+            if ctr != k-1:
+                return newHead
+
             # save next node of new root of sublist 
             tmp = current.next
 
@@ -55,14 +58,47 @@ class Solution:
 
         return newHead
 
+    def swapPairsConstantMem(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        k = 2
+        current = head
+        newHead = None
+        prev = None
+        ctr = 0
+        stack = deque()
+
+        if head == None:
+            return None
+            
+        while True:
+            # loop to kth position
+            while current.next != None:
+                # swap current and next
+                tmp = current
+
+                current = current.next
+                tmp.next = current.next
+                current.next = tmp
+
+                if newHead == None:
+                    newHead = current
+
+                # next root of sublist
+                current = current.next
+
+            if current.next == None:
+                return newHead
+ 
+        return newHead        
+
 n4 = ListNode(4)
-n3 = ListNode(3)
-n2 = ListNode(2)
-n1 = ListNode(1)
+n3 = ListNode(3, n4)
+n2 = ListNode(2, n3)
+n1 = ListNode(1, n2)
 
 sol = Solution()
 
-n = sol.swapPairs(None)
+# n = sol.swapPairs(n1)
+n = sol.swapPairsConstantMem(n1)
 
 while(n != None):
     print(n.val, '->')
