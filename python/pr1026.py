@@ -39,8 +39,7 @@ class Solution:
                 node_id += 1
 
             parent_id = parents.get(current_id)
-            print(f"{parent_id} {current_id}")
-            while parent_id:
+            while parent_id is not None:
                 parent = nodes[parent_id]
                 maxval = (abs(parent.val - current.val) 
                           if abs(parent.val - current.val) > maxval 
