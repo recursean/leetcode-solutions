@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 // You may not modify the values in the list's nodes, only nodes itself may be changed.
 
-public class DailyChallenge082020 {
+public class Pr143 {
 
     public class ListNode {
         int val;
@@ -57,13 +57,13 @@ public class DailyChallenge082020 {
         ListNode b = new ListNode(2, c);
         ListNode a = new ListNode(1, b);
 
-        new DailyChallenge082020().reorderList(a);
+        new Pr143().reorderList(a);
 
         return a;
     }
 
     public static void main(String[] args) {
-        ListNode tmp = new DailyChallenge082020().helper();
+        ListNode tmp = new Pr143().helper();
 
         System.out.println(tmp.val);
         while(tmp.next != null) {
