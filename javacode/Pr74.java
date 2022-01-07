@@ -1,4 +1,4 @@
-public class DailyChallenge101620 {
+public class Pr74 {
     public boolean searchMatrix(int[][] matrix, int target) {
         boolean targetFound = false;
 
@@ -36,6 +36,6 @@ public class DailyChallenge101620 {
 
         int target = 16;
 
-        System.out.println(new DailyChallenge101620().searchMatrix(matrix, target));
+        System.out.println(new Pr74().searchMatrix(matrix, target));
     }
 }

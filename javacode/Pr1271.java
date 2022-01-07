@@ -1,6 +1,6 @@
 import java.util.regex.Pattern; 
 
-class BWQ1 {
+class Pr1271 {
     public static void print(String s) { System.out.println(s); }
 
     public String toHexspeak(String num) {
@@ -19,6 +19,6 @@ class BWQ1 {
     }
 
     public static void main(String args[]) {
-        print(new BWQ1().toHexspeak("747823223228"));
+        print(new Pr1271().toHexspeak("747823223228"));
     }
 }

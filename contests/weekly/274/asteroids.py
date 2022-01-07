@@ -2,7 +2,7 @@ from typing import *
 
 class Solution:
     def asteroidsDestroyed(self, mass: int, asteroids: List[int]) -> bool:
-        self.mergesort(asteroids)
+        self.mergesort(asteroids)3
 
         for a in asteroids:
             if mass < a:

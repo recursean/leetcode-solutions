@@ -14,7 +14,7 @@
 // For example, the first word gets "a" added to the end, the second word gets "aa" added to the end and so on.
 // Return the final sentence representing the conversion from S to Goat Latin. 
 
-class DailyChallenge081920 {
+class Pr824 {
     public String toGoatLatin(String S) {
         String[] words = S.split(" ");
         String addOn = "a";
@@ -43,6 +43,6 @@ class DailyChallenge081920 {
     }
 
     public static void main(String[] args) {
-        System.out.println(new DailyChallenge081920().toGoatLatin("I speak Goat Latin"));
+        System.out.println(new Pr824().toGoatLatin("I speak Goat Latin"));
     }
 }
